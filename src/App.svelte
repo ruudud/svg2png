@@ -1,5 +1,5 @@
 <script lang="ts">
-	let svgInput: string;
+  let svgInput: string;
   let svgOutput: string;
   let canvasElement : HTMLCanvasElement;
   let isCopiedToClipboard: boolean = false;
@@ -18,7 +18,6 @@
     svgEl.setAttribute('width', '600');
     svgEl.setAttribute('height', '600');
     svgEl.setAttribute('viewBox', '0 0 600 600');
-    svgEl.removeChild(svgEl.querySelector('rect'));
     svgEl.querySelector('g').removeAttribute('transform');
 
     return new XMLSerializer().serializeToString(svgEl);
